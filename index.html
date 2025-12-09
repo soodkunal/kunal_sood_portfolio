@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kunal Sood | Data Scientist & ML Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans">
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-20 bg-slate-950/80 backdrop-blur border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-semibold tracking-tight text-slate-100">
+        Kunal Sood <span class="text-emerald-400">.</span>
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm text-slate-300">
+        <a href="#home" class="hover:text-emerald-400 transition">Home</a>
+        <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+        <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+        <a href="#about" class="hover:text-emerald-400 transition">About</a>
+        <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+      </nav>
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=ksood315@gmail.com"
+        target="_blank"
+        class="hidden md:inline-flex text-xs px-3 py-1.5 rounded-full border border-emerald-400/50 text-emerald-300 hover:bg-emerald-400/10 transition"
+      >
+        Let’s talk
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 pt-24 pb-16" id="home">
+    <!-- Hero -->
+    <section class="py-10 md:py-16 flex flex-col md:flex-row gap-10 items-center">
+      <!-- Left: Intro -->
+      <div class="flex-1 order-2 md:order-1">
+        <p class="text-xs uppercase tracking-[0.2em] text-emerald-400">
+          Data Scientist
+        </p>
+        <h1 class="mt-4 text-3xl md:text-5xl font-semibold tracking-tight">
+          Leveraging data and AI to build
+          <span class="text-emerald-400">impactful intelligent systems.</span>
+        </h1>
+        <p class="mt-4 text-slate-300 text-sm md:text-base max-w-xl">
+          I'm <span class="font-medium">Kunal Sood</span>, a Data Scientist specializing in machine learning, deep learning, and computer vision. I focus on turning complex data into clear insights, building and evaluating models, and using statistical and ML techniques to drive measurable impact in real-world problems.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            href="#projects"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-emerald-500 text-slate-950 text-sm font-medium hover:bg-emerald-400 transition"
+          >
+            View My Projects
+          </a>
+          <a
+            href="KunalSood_resume.pdf"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-slate-700 text-sm text-slate-200 hover:border-emerald-400 hover:text-emerald-300 transition"
+          >
+            Download CV
+          </a>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-4 text-xs text-slate-400">
+          <span class="inline-flex items-center gap-2">
+            ⚙️ DRDO · Data Scientist Intern
+          </span>
+          <span class="inline-flex items-center gap-2">
+            🧠 Omdena · ML Engineer Part Time
+          </span>
+          <span class="inline-flex items-center gap-2">
+            🎓 B.Tech CSE (AI & ML)
+          </span>
+        </div>
+      </div>
+
+      <!-- Right: Profile + Visualization Card -->
+      <div class="flex-1 max-w-sm w-full order-1 md:order-2">
+        <div class="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-5 shadow-xl space-y-5">
+          <!-- Profile block -->
+          <div class="flex flex-col items-center gap-3">
+            <div class="h-24 w-24 rounded-full overflow-hidden border-2 border-emerald-500 shadow-lg shadow-emerald-500/30">
+              <img
+                src="profile.jpg"
+                alt="Kunal Sood"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="text-center">
+              <p class="text-sm font-semibold text-slate-100">Kunal Sood</p>
+              <p class="text-xs text-slate-400">Data Scientist</p>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-800 pt-4">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="h-10 w-10 rounded-full bg-slate-800 flex items-center justify-center text-xl">
+                🧪
+              </div>
+              <div>
+                <p class="text-sm font-medium text-slate-100">Model Performance</p>
+                <p class="text-xs text-slate-400">Recent project metrics</p>
+              </div>
+            </div>
+
+            <!-- Fake chart / KPI block -->
+            <div class="space-y-3 text-xs">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Sign Language Classifier</span>
+                <span class="font-semibold text-emerald-400">94% acc</span>
+              </div>
+              <div class="h-2 w-full rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full w-[94%] bg-emerald-500"></div>
+              </div>
+
+              <div class="flex items-center justify-between">
+              <span class="text-slate-400">Plant Species Classifier</span>
+              <span class="font-semibold text-emerald-400">98% acc</span>
+            </div>
+              <div class="h-2 w-full rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full w-[98%] bg-emerald-500"></div>
+              </div>
+
+              <div class="mt-4 rounded-2xl border border-slate-800 bg-slate-900/60 p-3">
+                <p class="text-xs text-slate-300 mb-1">
+                  Adversarial NN · Encryption Robustness
+                </p>
+                <p class="text-[11px] text-slate-400">
+                  Exploring encoder–decoder–attacker architectures to strengthen cryptographic systems under adversarial conditions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills at a Glance -->
+    <section id="skills" class="py-12 border-y border-slate-800">
+      <h2 class="text-xl md:text-2xl font-semibold mb-6 flex items-center gap-2">
+        Skills at a Glance
+        <span class="text-xs font-medium text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">
+          Core Stack
+        </span>
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6 text-sm">
+        <!-- ML & DS -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+          <p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Machine Learning & Visualization</p>
+          <p class="text-slate-100 font-medium mb-3">
+            Predictive modeling & experimentation
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">Python</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">Pandas</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">NumPy</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">Scikit-learn</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">SciPy</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">Matplotlib</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">Seaborn</span>
+          </div>
+        </div>
+
+        <!-- Deep Learning & CV -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+          <p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">
+            Deep Learning & Computer Vision
+          </p>
+          <p class="text-slate-100 font-medium mb-3">
+            Vision, sequence models & adversarial NN
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">TensorFlow</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">Keras</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">PyTorch</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">OpenCV</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">Scikit-Image</span>
+          </div>
+        </div>
+
+        <!-- Data, Cloud, Professional -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+          <p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">
+            Data · Cloud · Leadership
+          </p>
+          <p class="text-slate-100 font-medium mb-3">
+            Deployable data products & stakeholder alignment
+          </p>
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">MySQL</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">Bash Scripting</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">BigQuery</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">GCE</span>
+            <span class="px-2 py-1 rounded-full bg-slate-800 text-xs text-slate-200">Cloud Storage</span>
+          </div>
+          <div class="flex flex-wrap gap-2 text-[11px] text-emerald-300">
+            <span class="px-2 py-1 rounded-full bg-emerald-400/10 border border-emerald-500/40">
+              Program Management
+            </span>
+            <span class="px-2 py-1 rounded-full bg-emerald-400/10 border border-emerald-500/40">
+              Product Thinking
+            </span>
+            <span class="px-2 py-1 rounded-full bg-emerald-400/10 border border-emerald-500/40">
+              Community Building
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-14">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl md:text-2xl font-semibold">Featured Projects</h2>
+        <span class="text-xs text-slate-400">
+          Curated selection of applied ML, DL & AI work
+        </span>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- InterviewJinni -->
+        <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-50">
+              InterviewJinni – AI Interview Platform
+            </h3>
+            <p class="mt-2 text-sm text-slate-300">
+              Built an AI-driven mock interview platform that provides real-time analytics,
+              structured feedback, and performance tracking across multiple interview sessions.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">LLM</span>
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">NLP</span>
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Python</span>
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Analytics</span>
+            </div>
+          </div>
+
+        </article>
+
+        <!-- GuruJi -->
+<article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 flex flex-col gap-3">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-50">
+              GuruJi – Rapid MOOC Generator (Patent Filed)
+            </h3>
+            <p class="mt-2 text-sm text-slate-300">
+              Created a rapid course creation tool that reduces MOOC development time
+              from days to minutes using automated content generation aligned with curricula.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Content AI</span>
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Computer Vision</span>
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Bash Scripting</span>
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">NLP</span>
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Python</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ShineMate -->
+        <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-50">
+              ShineMate – Intelligent Cleaning Robot (Design Patent)
+            </h3>
+            <p class="mt-2 text-sm text-slate-300">
+              Developed a POC for an autonomous cleaning robot with navigation, obstacle detection,
+              and air-quality monitoring using sensor fusion and CV techniques.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Computer Vision</span>
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Robotics</span>
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Python</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- FoliageAI / BCG -->
+        <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-50">
+              FoliageAI & BCG Data Science Simulation
+            </h3>
+            <p class="mt-2 text-sm text-slate-300">
+              FoliageAI: built a tree species classifier achieving 98% accuracy.
+              BCG simulation: engineered features and trained a Random Forest model
+              for churn prediction with 85% accuracy.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Classification</span>
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Random Forest</span>
+              <span class="px-2 py-1 rounded-full bg-slate-800 text-slate-200">Scikit-learn</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience, About & Certifications -->
+    <section id="about" class="py-12 border-y border-slate-800">
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Experience -->
+        <div>
+          <h2 class="text-xl md:text-2xl font-semibold mb-4">Experience</h2>
+          <div class="space-y-5 text-sm">
+            <div>
+              <p class="font-medium text-slate-100">
+                Data Scientist Intern · DRDO, New Delhi
+              </p>
+              <p class="text-xs text-slate-400">Aug 2025 – Present</p>
+              <ul class="mt-2 list-disc list-inside text-slate-300 space-y-1">
+                <li>Engineered adversarial neural networks (TensorFlow/PyTorch) to bolster encryption robustness.</li>
+                <li>Analyzed cipher-text & plain-text datasets to identify security patterns.</li>
+                <li>Optimized encoder–decoder–attacker architectures with custom loss functions.</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="font-medium text-slate-100">
+                Machine Learning Engineer · Omdena (Remote)
+              </p>
+              <p class="text-xs text-slate-400">Jan 2025 – Apr 2025</p>
+              <ul class="mt-2 list-disc list-inside text-slate-300 space-y-1">
+                <li>Engineered ML components that estimate, analyze, and reduce SME carbon footprints through data-driven insights.</li>
+                <li>Aggregated & preprocessed 60k+ multi-source sign language samples (images, videos, landmarks).</li>
+                <li>Trained CNN & LSTM models, improving accuracy from 75% to 94% on a refined dataset.</li>
+                <li>Designed NLP preprocessing pipelines for real-time sentiment understanding.</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="font-medium text-slate-100">
+                Research Intern · Globus Eight, Gurugram
+              </p>
+              <p class="text-xs text-slate-400">Jul 2024 – Aug 2024</p>
+              <ul class="mt-2 list-disc list-inside text-slate-300 space-y-1">
+                <li>Researched ethical deepfake applications and constructive use-cases.</li>
+                <li>Developed lip-sync and audio-video sync models for realistic talking avatars.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: About, Education, Certifications -->
+        <div class="space-y-6">
+          <!-- About & Education -->
+          <div>
+            <h2 class="text-xl md:text-2xl font-semibold mb-4">About & Education</h2>
+            <p class="text-sm text-slate-300 mb-4">
+              I specialize in transforming data into scalable, real-world solutions. My work spans predictive modeling, deep learning,
+              computer vision, and applied AI, with a strong focus on building systems that deliver measurable impact. I enjoy solving
+              complex problems at the intersection of analytics, engineering, and product, turning raw data into actionable intelligence.
+            </p>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-sm">
+              <p class="font-medium text-slate-100">
+                B.Tech · Computer Science & Engineering (AI & ML)
+              </p>
+              <p class="text-xs text-slate-400">Shri Vishwakarma Skill University, Haryana · CGPA: 8.5/10</p>
+              <p class="mt-2 text-slate-300 text-xs">
+                Relevant coursework: OOP, DSA, Databases, Machine Learning, Deep Learning,
+                Data Analytics, Quantum Computing.
+              </p>
+            </div>
+
+            <div class="mt-4 text-xs text-slate-400 space-y-1">
+              <p>🏛 Presented AI projects (GuruJi, ShineMate, InterviewJinni) to the Hon'ble Governor & Hon'ble Chief Minister of Haryana.</p>
+              <p>📊 Advised on Haryana State Budget 2025–26 with a focus on technology-led governance.</p>
+              <p>🚀 Founded and led GDG on Campus (GDGoC SVSU), organizing AI & Google tech workshops.</p>
+            </div>
+          </div>
+
+          <!-- Certifications (clean, compact) -->
+          <div id="certifications">
+            <h3 class="text-lg font-semibold mb-3">Certifications</h3>
+            <div class="grid sm:grid-cols-2 gap-3 text-[13px] text-slate-200">
+              <div class="rounded-xl border border-slate-800 bg-slate-900/60 px-3 py-2">
+                <p class="font-medium">Machine Learning Specialization</p>
+                <p class="text-[11px] text-slate-400">Coursera</p>
+              </div>
+              <div class="rounded-xl border border-slate-800 bg-slate-900/60 px-3 py-2">
+                <p class="font-medium">Neural Networks & Deep Learning</p>
+                <p class="text-[11px] text-slate-400">Coursera</p>
+              </div>
+              <div class="rounded-xl border border-slate-800 bg-slate-900/60 px-3 py-2">
+                <p class="font-medium">Improving Deep Neural Networks</p>
+                <p class="text-[11px] text-slate-400">Coursera</p>
+              </div>
+              <div class="rounded-xl border border-slate-800 bg-slate-900/60 px-3 py-2">
+                <p class="font-medium">Structuring ML Projects</p>
+                <p class="text-[11px] text-slate-400">Coursera</p>
+              </div>
+              <div class="rounded-xl border border-slate-800 bg-slate-900/60 px-3 py-2">
+                <p class="font-medium">SQL for Data Science</p>
+                <p class="text-[11px] text-slate-400">Coursera</p>
+              </div>
+              <div class="rounded-xl border border-slate-800 bg-slate-900/60 px-3 py-2">
+                <p class="font-medium">ML 101 (Scikit-learn & StatsModels)</p>
+                <p class="text-[11px] text-slate-400">Udemy</p>
+              </div>
+              <div class="rounded-xl border border-slate-800 bg-slate-900/60 px-3 py-2 sm:col-span-2">
+                <p class="font-medium">100 Days of Code: Python Pro Bootcamp</p>
+                <p class="text-[11px] text-slate-400">Udemy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="py-12">
+      <h2 class="text-xl md:text-2xl font-semibold mb-3">Contact</h2>
+      <p class="text-sm text-slate-300 mb-4">
+        Open to data science, ML engineering, and AI research roles, as well as collaborations on impactful AI projects.
+      </p>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <a
+          href="mailto:ksood315@gmail.com"
+          class="inline-flex items-center px-4 py-2 rounded-full border border-slate-700 hover:border-emerald-400 hover:text-emerald-300 transition"
+        >
+          ✉️ ksood315@gmail.com
+        </a>
+        <a
+          href="https://github.com/soodkunal"
+          class="inline-flex items-center px-4 py-2 rounded-full border border-slate-700 hover:border-emerald-400 hover:text-emerald-300 transition"
+        >
+          🧑‍💻 github.com/soodkunal
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kunal-sood-3b993225b"
+          class="inline-flex items-center px-4 py-2 rounded-full border border-slate-700 hover:border-emerald-400 hover:text-emerald-300 transition"
+        >
+          🔗 LinkedIn Profile
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-4">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 gap-2">
+      <span>© <span id="year"></span> Kunal Sood. All rights reserved.</span>
+      <span>Built with data, ML, and a minimalist dark UI.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
