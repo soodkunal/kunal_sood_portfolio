@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111713">
+  <title>Kunal Sood | AI Engineering &amp; Research</title>
+  <meta name="description" content="Kunal Sood's portfolio in applied AI research and engineering, with work in multilingual speech, geospatial AI, computer vision, and neural architectures.">
+  <style>
+    :root{color-scheme:dark;--bg:#111713;--paper:#18221c;--raised:#202d24;--line:#34473b;--text:#f1f4e9;--muted:#bac9bd;--lime:#cefa88;--ink:#172013;--display:Georgia,'Times New Roman',serif;--body:Inter,system-ui,'Segoe UI',sans-serif}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font:1rem/1.65 var(--body)}
+    h1,h2,h3,p,ul,dl,figure{margin:0}
+    h2,h3{line-height:1.18}
+    a{color:inherit;text-underline-offset:.24em}
+    img{display:block;max-width:100%}
+    a:focus-visible,summary:focus-visible{outline:.16rem solid var(--lime);outline-offset:.25rem}
+    main [id]{scroll-margin-top:6rem}
+    .wrap{width:min(100% - 3.5rem,72rem);margin-inline:auto}
+    .skip{position:fixed;top:.6rem;left:.6rem;transform:translateY(-180%);z-index:5}
+    .skip:focus{transform:none}
+    .header{position:sticky;top:0;z-index:3;background:#111713f5;border-bottom:1px solid var(--line)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:1.25rem;min-height:4.5rem}
+    .brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;white-space:nowrap;font-weight:680}
+    .monogram{width:2.15rem;aspect-ratio:1;display:grid;place-items:center;border-radius:.35rem;background:var(--lime);color:var(--ink);font-size:.85rem;letter-spacing:-.04em}
+    nav{display:flex;align-items:center;gap:clamp(.75rem,2.25vw,2.05rem)}
+    nav a{color:var(--muted);font-size:.9rem;text-decoration:none;white-space:nowrap}
+    nav a:hover, footer a:hover{color:var(--lime)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.35rem;min-height:2.8rem;padding:.6rem 1rem;border:1px solid var(--line);border-radius:.35rem;font-size:.94rem;font-weight:650;text-decoration:none;color:var(--text);transition:background .18s,border-color .18s}
+    .btn:hover{border-color:var(--lime);background:var(--raised)}
+    .btn-primary{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+    .btn-primary:hover{background:#e1ffad;color:var(--ink)}
+    .hero{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);align-items:center;gap:clamp(2rem,7vw,6rem);padding-block:clamp(3.2rem,7vw,6rem) clamp(3rem,5.2vw,4.5rem)}
+    .label{color:var(--lime);font-size:.875rem;font-weight:680;letter-spacing:.09em;text-transform:uppercase}
+    h1{font:400 clamp(3.25rem,7vw,6.45rem)/.98 var(--display);letter-spacing:-.056em;margin:.85rem 0 1.35rem;text-wrap:balance}
+    h1 em{color:var(--lime);font-weight:400}
+    .hero-copy{color:var(--muted);font-size:clamp(1.04rem,1.55vw,1.2rem);max-width:33rem}
+    .actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.65rem}
+    .portrait{position:relative;width:100%;max-width:24rem;justify-self:end}
+    .photo{background:#38473c;border:1px solid #637664;border-radius:1rem 1rem .35rem .35rem;overflow:hidden}
+    .photo img{width:100%;height:auto;aspect-ratio:1/1.1;object-fit:cover;object-position:center 33%}
+    .portrait figcaption{display:flex;justify-content:space-between;gap:.7rem;padding:.8rem 0 .35rem;border-bottom:1px solid var(--line);font-size:.875rem;color:var(--muted)}
+    .portrait figcaption strong{color:var(--text);font-weight:620}
+    .proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid var(--line)}
+    .proof>div{min-width:0;padding:1.2rem 1.35rem;display:flex;gap:.85rem;align-items:center}
+    .proof>div:first-child{padding-left:0}
+    .proof>div+div{border-left:1px solid var(--line)}
+    .proof dt{color:var(--lime);font:400 clamp(1.8rem,3vw,2.8rem)/1 var(--display);white-space:nowrap}
+    .proof dd{margin:0;color:var(--muted);font-size:.9rem;line-height:1.35}
+    .section{padding-block:clamp(2.8rem,6vw,5rem);border-bottom:1px solid var(--line)}
+    .section-head{margin-bottom:1.8rem}
+    .section-head h2,.section h2,.contact h2{font:400 clamp(2.35rem,4.9vw,4rem)/1.05 var(--display);letter-spacing:-.045em}
+    .feature{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,.8fr);gap:1rem}
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:.55rem;padding:clamp(1.2rem,3vw,2.15rem)}
+    .paper-feature{background:radial-gradient(ellipse at 90% 0%,#303e24 0%,transparent 70%),var(--paper)}
+    .paper-feature h3{font:400 clamp(1.62rem,3.2vw,2.8rem)/1.12 var(--display);letter-spacing:-.03em;margin:.65rem 0 .75rem;max-width:21ch}
+    .panel p:not(.label),.project p,.entry p,.entry li,.education p,.recognition li,.contact p{color:var(--muted)}
+    .panel .meta{margin-top:.75rem}
+    .panel .btn{margin-top:1.3rem}
+    .award h3{margin:.65rem 0 .55rem;font-size:1.25rem}
+    .award .divider{height:1px;background:var(--line);margin:1.2rem 0}
+    .meta{color:var(--muted);font-size:.875rem}
+    .experience{display:grid;gap:0}
+    .entry{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:1.5rem;padding:1.45rem 0;border-top:1px solid var(--line)}
+    .entry h3{font-size:1.12rem;margin-bottom:.25rem}
+    .entry .role{font-size:.92rem;color:var(--text)}
+    .entry .meta{margin-top:.25rem}
+    .entry ul{padding-left:1.12rem}
+    .entry li+li{margin-top:.32rem}
+    .entry li::marker,.recognition li::marker{color:var(--lime)}
+    .project-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.9rem}
+    .project{grid-column:span 2;display:flex;flex-direction:column;gap:.65rem}
+    .project:nth-child(-n+2){grid-column:span 3}
+    .project h3{font:400 1.75rem/1.12 var(--display);letter-spacing:-.027em}
+    .project .meta{margin-top:auto;padding-top:.35rem}
+    .project a,.text-link{color:var(--lime);font-weight:650}
+    .two-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.5rem,5vw,4rem)}
+    .two-col h2{margin-bottom:1.2rem}
+    .education h3{font-size:1.15rem;margin-bottom:.35rem}
+    .education p+p{margin-top:.55rem}
+    .education strong{color:var(--text)}
+    .recognition ul{padding-left:1.05rem}
+    .recognition li+li{margin-top:.72rem}
+    details{border-top:1px solid var(--line);padding:.8rem 0;margin-top:1.15rem}
+    summary{cursor:pointer;font-weight:650}
+    details ul{padding:.55rem 0 .1rem 1.1rem;color:var(--muted)}
+    details li+li{margin-top:.3rem}
+    .skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
+    .skills-grid dt{font-weight:680;margin-bottom:.4rem}
+    .skills-grid dd{margin:0;color:var(--muted)}
+    .contact{display:flex;justify-content:space-between;align-items:end;gap:1.8rem;padding-block:clamp(3rem,7vw,5.5rem)}
+    .contact p{margin-top:.6rem}
+    .contact .actions{margin:0}
+    footer{border-top:1px solid var(--line);padding:1rem 0 1.4rem;color:var(--muted);font-size:.875rem}
+    footer .wrap{display:flex;justify-content:space-between;gap:1rem}
+    @media(max-width:49rem){
+      .wrap{width:min(100% - 2.4rem,72rem)}
+      .header-inner{flex-wrap:wrap;justify-content:space-between;gap:0 .8rem;padding-top:.65rem}
+      nav{order:3;width:100%;padding:.5rem 0 .58rem;justify-content:space-between;gap:.55rem}
+      nav a{font-size:.875rem}
+      .header .btn{min-height:2.4rem;padding:.38rem .7rem}
+      main [id]{scroll-margin-top:7.5rem}
+      .hero{gap:1.65rem;grid-template-columns:minmax(0,1fr) minmax(0,.72fr)}
+      h1{font-size:clamp(2.65rem,7.6vw,4.4rem)}
+      .proof>div{gap:.5rem;padding:.9rem .75rem;align-items:start;flex-direction:column}
+      .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .project-grid .project{grid-column:span 1}
+      .feature,.entry{gap:1rem}
+    }
+    @media(max-width:35rem){
+      .wrap{width:calc(100% - 2rem)}
+      .hero,.feature,.entry,.two-col,.skills-grid,.project-grid{grid-template-columns:minmax(0,1fr)}
+      .hero{padding-block:2.75rem 2rem}
+      .portrait{max-width:none;justify-self:stretch}
+      .photo img{aspect-ratio:4/3;object-position:center 30%}
+      .proof>div{padding-inline:.55rem}
+      .proof dd{font-size:.875rem}
+      .contact{display:block}
+      .contact .actions{margin-top:1.2rem}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip btn btn-primary" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#home"><span class="monogram" aria-hidden="true">KS</span> Kunal Sood</a>
+      <nav aria-label="Main navigation">
+        <a href="#research">Research</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#about">About</a>
+      </nav>
+      <a class="btn" href="#contact">Contact</a>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="label">AI engineering &amp; research</p>
+        <h1 id="hero-title">I build and study <em>AI systems.</em></h1>
+        <p class="hero-copy">I’m Kunal Sood, an AI engineer interested in the math behind models and the experiments that show where they work. My experience spans multilingual speech, geospatial AI, computer vision, and neural architectures.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">Explore my work</a>
+          <a class="btn" href="Kunal_Sood_CV.pdf" download>Download résumé</a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <div class="photo"><img src="profile.jpg" alt="Portrait of Kunal Sood" width="820" height="929" fetchpriority="high"></div>
+        <figcaption><strong>Kunal Sood</strong><span>New Delhi, India</span></figcaption>
+      </figure>
+    </section>
+
+    <dl class="proof" aria-label="Work and education highlights">
+      <div><dt>7</dt><dd>Languages in my<br>speech and transcript work</dd></div>
+      <div><dt>11</dt><dd>Customer feedback categories<br>modeled with XLM-RoBERTa</dd></div>
+      <div><dt>8.79</dt><dd>CGPA out of 10<br>B.Tech, AI &amp; ML</dd></div>
+    </dl>
+
+    <section id="research" class="section" aria-labelledby="research-title">
+      <div class="section-head"><h2 id="research-title">Research</h2></div>
+      <div class="feature">
+        <article class="panel paper-feature">
+          <p class="label">First-author publication · 2026</p>
+          <h3>Secure Reversible Transformations through Neural Coupling Architecture</h3>
+          <p>Designed custom neural architectures and loss functions, then used controlled experiments and statistical analysis to evaluate reconstruction fidelity and robustness.</p>
+          <p class="meta">Kunal Sood, Raunak Singh, and Girish Mishra · IRE Journals, 9(9), 1621–1633</p>
+          <a class="btn" href="https://doi.org/10.64388/IREV9I9-1715290">Read the paper</a>
+        </article>
+        <aside class="panel award">
+          <p class="label">ICMSCI 2026</p>
+          <h3>Best Student Presenter</h3>
+          <p>Recognized for my presentation on neural encryption research.</p>
+          <div class="divider" aria-hidden="true"></div>
+          <h3>Research interests</h3>
+          <p>Model design, optimization, statistical evaluation, and applying research methods to practical AI systems.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <div class="section-head"><h2 id="experience-title">Experience</h2></div>
+      <div class="experience">
+        <article class="entry">
+          <div><h3>Wyzmindz Solutions Pvt Ltd</h3><p class="role">Data Scientist Intern</p><p class="meta">Jun 2026–Present · Noida, India</p></div>
+          <ul>
+            <li>Built a Machine Ground Truth (MGT) pipeline to generate transcripts for automatic speech recognition (ASR) training and benchmark accuracy where manual labels were unavailable.</li>
+            <li>Worked with speech and transcripts in Tamil, Telugu, French, Spanish, English, Hinglish, and Hindi. Fine-tuned XLM-RoBERTa to classify customer calls into 11 Voice of Customer categories.</li>
+            <li>Analyzing customer call data for one client to identify sales opportunities and inform sales strategy.</li>
+          </ul>
+        </article>
+        <article class="entry">
+          <div><h3>Softel Solutions Pvt Ltd</h3><p class="role">AI Engineer Intern</p><p class="meta">Mar–Jun 2026 · Noida, India</p></div>
+          <p>Built an AI agent to ingest real-time environmental data from Earth2. Extracted event locations and timestamps from LLM outputs, then geocoded the events and exported GeoJSON for interactive maps. The workflow reduced manual annotation by over 90%.</p>
+        </article>
+        <article class="entry">
+          <div><h3>DRDO</h3><p class="role">Research Intern</p><p class="meta">Aug 2025–Jan 2026 · New Delhi, India</p></div>
+          <p>Evaluated the robustness of neural encryption systems with Python, TensorFlow, and Keras. Designed custom architectures and loss functions, achieved 98% authorized decoding fidelity in experiments, and compared plaintext and ciphertext distributions.</p>
+        </article>
+        <article class="entry">
+          <div><h3>Omdena</h3><p class="role">Machine Learning Engineer</p><p class="meta">Jan–Apr 2025 · Remote</p></div>
+          <p>Led pothole detection and plant disease detection initiatives as Product Owner, coordinating teams across three continents. Also contributed to sign language translation, VR training, and carbon-management forecasting.</p>
+        </article>
+        <article class="entry">
+          <div><h3>Globus Eight</h3><p class="role">Research Intern</p><p class="meta">Jul–Aug 2024 · Gurugram, India</p></div>
+          <p>Developed lip-sync and audio-video alignment models for talking avatars using Python, OpenCV, and TensorFlow. Measured audio-video lag below 80 ms.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="section-head"><h2 id="projects-title">Selected projects</h2></div>
+      <div class="project-grid">
+        <article class="panel project">
+          <p class="label">LLM application</p><h3>InterviewJinni</h3>
+          <p>An adaptive mock-interview platform that adjusts question difficulty during sessions and provides automated feedback and performance analytics.</p>
+          <p class="meta"><a href="https://github.com/soodkunal/interview_jinni">View InterviewJinni on GitHub</a></p>
+        </article>
+        <article class="panel project">
+          <p class="label">Computer vision</p><h3>FoliageAI</h3>
+          <p>Fine-tuned convolutional networks to classify 50+ tree species. The project reached 98% classification accuracy and reduced inference latency by 35%.</p>
+          <p class="meta"><a href="https://github.com/soodkunal/plantspeciesd8on">View FoliageAI on GitHub</a></p>
+        </article>
+        <article class="panel project">
+          <p class="label">AI for education</p><h3>GuruJi</h3>
+          <p>A course authoring tool that uses language models to generate materials for online courses.</p>
+          <p class="meta">Patent application 202411089768</p>
+        </article>
+        <article class="panel project">
+          <p class="label">Robotics</p><h3>ShineMate</h3>
+          <p>An autonomous cleaning robot prototype with deep learning navigation and IoT air-quality monitoring.</p>
+          <p class="meta">Design application 421100-001</p>
+        </article>
+        <article class="panel project">
+          <p class="label">Data science simulation</p><h3>Customer churn</h3>
+          <p>Engineered features from customer usage and billing data and trained a random forest classifier that reached 85% accuracy in the BCG simulation.</p>
+          <p class="meta"><a href="https://www.theforage.com/simulations/bcg/data-science-ccdz">View the BCG simulation</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section two-col" aria-label="Education and leadership">
+      <div class="education">
+        <h2>Education</h2>
+        <h3>B.Tech in Computer Science and Engineering (AI &amp; ML)</h3>
+        <p>Shri Vishwakarma Skill University · Jul 2022–Jun 2026</p>
+        <p><strong>8.79/10 CGPA · First Division with Honours</strong></p>
+        <p>Coursework in machine learning, deep learning, statistical analysis, computer vision, NLP, and business intelligence.</p>
+        <details>
+          <summary>Certifications</summary>
+          <ul>
+            <li>Business Intelligence &amp; Analytics · NPTEL / IIT Madras, Elite, 86%</li>
+            <li><a href="https://careerhub-api.datacamp.com/certificates/DS0021892982764/pdf">Data Scientist Career Track</a> · DataCamp</li>
+            <li><a href="https://coursera.org/share/90e5b54febd4c49d6f63eb53bec8c2c4">Machine Learning Specialization</a> · Coursera</li>
+            <li><a href="https://coursera.org/share/2ab6b5a11e255afc4d59b9ec659af938">Neural Networks and Deep Learning</a> · Coursera</li>
+            <li><a href="https://www.coursera.org/share/d93144c223857d8b4cf14abe8e5015cd">SQL for Data Science</a> · Coursera</li>
+            <li><a href="https://www.udemy.com/certificate/UC-b7adbb90-9175-4a4b-97a0-1f5594089439/">ML 101: Scikit-learn and StatsModels</a> · Udemy</li>
+          </ul>
+        </details>
+      </div>
+      <div class="recognition">
+        <h2>Leadership</h2>
+        <ul>
+          <li>Founded and led GDG on Campus SVSU, organizing AI workshops and hackathons for over 100 students (2025–26).</li>
+          <li>Presented GuruJi, ShineMate, and InterviewJinni to the Chief Minister of Haryana and contributed technical insights for the state’s 2025–26 budget.</li>
+          <li>Showcased GuruJi to the Governor of Haryana and discussed patent plans with the Minister of Skill Development and Entrepreneurship (2024).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="section-head"><h2 id="skills-title">Technical skills</h2></div>
+      <dl class="skills-grid">
+        <div class="panel"><dt>Machine learning &amp; statistics</dt><dd>Python, scikit-learn, NumPy, pandas, SciPy, statistical modeling, feature engineering</dd></div>
+        <div class="panel"><dt>Deep learning &amp; AI</dt><dd>PyTorch, TensorFlow, Keras, XLM-RoBERTa, OpenCV, spaCy, LangChain, RAG</dd></div>
+        <div class="panel"><dt>Data &amp; cloud</dt><dd>SQL, MySQL, BigQuery, Google Cloud, ETL pipelines, REST APIs</dd></div>
+        <div class="panel"><dt>Engineering &amp; visualization</dt><dd>C/C++, Bash, Docker, GitHub, GitLab, Matplotlib, Seaborn</dd></div>
+      </dl>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div><h2 id="contact-title">Get in touch</h2><p>For AI engineering roles and research collaborations.</p></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:ksood315@gmail.com">Email me</a>
+        <a class="btn" href="https://github.com/soodkunal">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/kunal-sood-3b993225b/">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>Kunal Sood</span><a href="#home">Back to top</a></div></footer>
+</body>
+</html>
